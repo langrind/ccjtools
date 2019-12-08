@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+"""
+Take arbitrary compile output and produce a json compilation database
+that clang-based tools will be happy with. Uses ad-hoc and naive heuristics,
+but it works.
+
+Copyright 2019 Nik Langrind.
+SPDX-License-Identifier: MIT
+"""
+
+import sys
+from ccjtools import ccj_make
+
+if __name__ == '__main__':
+    sys.exit(ccj_make.main(sys.argv))
+
